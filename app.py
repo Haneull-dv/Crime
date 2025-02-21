@@ -6,5 +6,5 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     crimecontroller = CrimeController()
-    crimecontroller.modeling('cctv_in_seoul.csv', 'crime_in_seoul.csv', 'pop_in_seoul.csv')
+    crimecontroller.modeling('cctv_in_seoul.csv', 'crime_in_seoul.csv', 'pop_in_seoul.xls')
     return render_template('index.html')
