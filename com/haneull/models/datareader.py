@@ -27,11 +27,11 @@ class DataReader:
     def new_file(self)-> str:
         return self._context + self._fname
 
-    def csv_to_dframe(self) -> object:
+    def csv_to_dframe(self) -> pd.DataFrame:
         file = self.new_file()
         return pd.read_csv(file, thousands=',')
 
-    def xls_to_dframe(self, header, usecols)-> object:
+    def xls_to_dframe(self, header, usecols) -> pd.DataFrame:
         file = self.new_file()
         return pd.read_excel(file, header=header, usecols=usecols)
 
@@ -39,9 +39,6 @@ class DataReader:
         file = self.new_file()
         return json.load(open(file))
 
-    @staticmethod
-    def create_gmaps():
-        return googlemaps.Client(key='..')
 
 
 

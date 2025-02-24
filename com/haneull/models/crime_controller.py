@@ -3,8 +3,6 @@ from com.haneull.models.datareader import DataReader
 from com.haneull.models.dataset import Dataset
 
 class CrimeController:
-    dataset = Dataset()
-    datareader = DataReader()
     service = CrimeService()
     
     def modeling(self, *args):
